@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blay{
+    width: 100vw;
+    margin: auto;
+    background-color: #7f7ef5;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.blay .a-l-s{
+    height: 40px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blay .a-l-s .a{
+    width: 15%;
+    height: 100%;
+    background-color: #0000006e;
+    border-radius:0 40px 40px 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.7s;
+    transition-property: transform;
+    color: white;
+    box-shadow: 3px -3px 7px 1px #000;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 767px){
+    .blay .a-l-s .a{
+        width: 30%;
+        font-size: 19px;
+    }
+}
+.blay .a-l-s .a.none{
+    transform: translateX(-233%);
+}
+
+.blay .a-l-s .a span{
+    color: #cb3600;
+    font-size: 30px;
+}
+
+.blay .aa{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 50%;
+    background-color: #0000007a;
+    z-index: 1;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+    transform:translateX(-100%) translateY(-50%);
+}
+
+.blay .aa.back{
+    transform: translateY(-50%);
+}
+
+
+
+.blay .aa .a-x,
+.blay .ss .s-x{
+    top: 10px;
+    position: absolute;
+    right: 10px;
+    background-color: #d79c9c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.blay .aa .a-x:hover,
+.blay .ss .s-x:hover{
+    color: #e30101;
+    border: 1px solid #e30101;
+}
+
+.blay .aa .a-x span,
+.blay .ss .s-x span{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.blay .aa .icon{
+    display: flex;
+    align-items: center;
+    background-color: #74a976;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    width: fit-content;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.blay .aa .icon span{
+    font-size: 39px;
+}
+
+
+
+.blay .aa .icon .voice,
+.blay .aa .icon .vibr,
+.blay .aa .icon .music{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: #6fc571;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.blay .aa .icon .voice:hover,
+.blay .aa .icon .vibr:hover,
+.blay .aa .icon .music:hover{
+    transform: scale(1.1);
+}
+
+.blay .aa .icon .voice span,
+.blay .aa .icon .vibr span{
+    position: absolute;
+}
+
+.blay .aa .icon .voice span:nth-child(2),
+.blay .aa .icon .vibr span:nth-child(2){
+    display: none;
+}
+
+.music input{
+    position: absolute;
+    width: 100px;
+    bottom: -15px;
+    display: none;
+}
+
+
+
+.blay .a-l-s .l{
+    width: 25%;
+    height: 100%;
+    background-color: #0000006e;
+    border-radius: 40px ;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #565656;
+    cursor: no-drop;
+    transition: 0.7s;
+    color: white;
+    box-shadow: 0px -3px 7px 1px #000;
+    z-index: 1;
+}
+
+.blay .a-l-s .l span{
+    margin-left: 6px;
+}
+
+@media (max-width: 767px){
+    .blay .a-l-s .l{
+        width: 35%;
+    }
+}
+
+.blay .a-l-s .l.none{
+    transform: translatey(-98px);
+}
+
+.blay .a-l-s .s{
+    width: 15%;
+    height: 100%;
+    background-color: #0000006e;
+    border-radius: 40px 0 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #565656;
+    cursor: pointer;
+    transition: 0.7s;
+    transition-property: transform;
+    color: white;
+    box-shadow: -3px -3px 7px 1px #000;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 767px){
+    .blay .a-l-s .s{
+        width: 30%;
+    }
+}
+
+.blay .a-l-s .s.none{
+    transform: translateX(105%);
+}
+
+.blay .a-l-s .s span{
+    color: #00cd00;
+    border-radius: 7px;
+    font-size: 30px;
+}
+
+.blay .ss{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 50%;
+    background-color: #0000007a;
+    z-index: 1;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+    transform:translateX(100%) translateY(-50%);
+    /* animation: sss 1s sss 1s infinite ; */
+}
+
+@keyframes sss {
+    0%{
+        left: -3px; 
+    }
+    20%{
+        left: 3px;
+    }
+    50%{
+        left: -3px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+.blay .ss.back{
+    transform: translateY(-50%);
+}
+
+.blay .ss .oo100{
+    position: absolute;
+    background-color: #666;
+    width: 250px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.blay .ss .oo100 .shm2{
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #999;
+    padding: 0 5px;
+    color: white;
+    height: 32px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.blay .ss .oo100 .shm1{
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #999;
+    padding: 0 5px;
+    color: white;
+    height: 32px;
+    cursor:not-allowed;
+    opacity: .5;
+    z-index: 1;
+}
+
+
+.blay .ss .oo100 .tran{
+    width: 1250px;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    border-radius: 20px;
+    transition: 0.8s ease-in-out;
+    transform: translateX(0px);
+}
+
+.blay .ss .oo100 .tran .box{
+    width: 190px;
+    height: 240px;
+    margin: 30px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    background-color: rgb(218, 218, 218);
+    position: relative;
+}
+
+.blay .ss .oo100 .tran .box span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.blay .ss .oo100 .tran .box div{
+    background-color: #F44336;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 45px 45px 15px 45px;
+}
+.blay .ss .oo100 .tran .box:nth-child(2) div{
+    background-color: #FFC107;
+}
+.blay .ss .oo100 .tran .box:nth-child(3) div{
+    background-color: #5e230d;
+}
+.blay .ss .oo100 .tran .box:nth-child(4) div{
+    background-color: #ff07ff;
+}
+.blay .ss .oo100 .tran .box:nth-child(5) div{
+    background-color: black;
+}
+
+
+.blay .ss .oo100 .tran .box p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.blay .ss .oo100 .tran .box button{
+    width: 100%;
+    height: 35px;
+    border-radius: 0px 0 20px 20px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background: green;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.blay .ss .oo100 .tran .box button.after{
+    background-color: rgb(73, 73, 102);
+}
+
+.blay .ss .oo100 .tran .box button.actev{
+    background-color: #02b7ff;
+}
+
+.blay .start{
+    position: absolute;
+    background-color: #0000006e;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    bottom: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.7s;
+}
+
+.blay .start:hover{
+    color: #000;
+    font-size: 40px;
+}
+
+.blay .start::after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 5px;
+    top: -5px;
+    left: 0;
+    border-radius: 0px 5px 5px 0px;
+    animation: width 1s infinite linear;
+}
+.blay .start::before{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 5px;
+    bottom: -5px;
+    right: 0;
+    border-radius: 0px 5px 5px 0px;
+    animation: width 1s infinite linear;
+}
+
+@keyframes width {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.blay .start.none{
+    transform: translateY(128px);
+}
+
+
+.blay .cont{
+    position: absolute;
+    background-image: url(img/images4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 0;
+    transition: 0.8s;
+    overflow: hidden;
+}
+
+.blay .cont.start-play{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0 , 0);
+}
+
+.blay .cont .hafaf{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(47, 79, 79, 0.473);
+    /* transition: .4s ease-in-out; */
+}
+
+.blay .cont .slah{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    bottom: 0;
+    left: calc(50% - 37.5px);
+    opacity: 0;
+    z-index: 100;
+}
+
+.blay .cont .slah img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.blay .cont .mrkabat{
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-image: url(img/BackgroundEraser_٢٠٢٣٠٤٠٢_١٤٠٤٥٧٣٢٨.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    /* transition:all  linear; */
+    transform: rotate(180deg);
+    top:  -85px;
+
+}
+
+.divslah{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    z-index: 1000000;
+}
+
+.gameOver{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    background-color: #000000b5;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    display: none;
+}
+
+.gameOver p {
+    color: #FF5722;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.gameOver button{
+    color: #422b0d;
+    border: 1px solid;
+    font-size: 20px;
+    font-weight:bold ;
+    padding: 5px 20px ;
+    border-radius: 5px ;
+    background-color: #ffffff94;
+    cursor: pointer;
+}
